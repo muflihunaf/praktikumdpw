@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi</title>
+</head>
+<body>
+    <label>Nilai:</label>
+    <input type="number" id="nilai">
+    <button id="btn">Konversi</button>
+
+    <h4 id="hasil"></h4>
+</body>
+<script type="text/javascript">
+    var nilai = document.getElementById('nilai');
+    let hasil = document.getElementById('hasil');
+    let btn = document.getElementById('btn');
+    btn.addEventListener("click", function () {
+        if (nilai.value <= 40) {
+            hasil.innerHTML = "Anda Mendapat Nilai E";
+        }else if(nilai.value <= 55){
+            hasil.innerHTML = `Anda Mendapat Nilai D`;
+        }else if(nilai.value <= 60){
+            hasil.innerHTML = `Anda Mendapat Nilai C`;
+        }else if(nilai.value <= 65){
+            hasil.innerHTML = `Anda Mendapat Nilai C+`;
+        }else if(nilai.value <= 70){
+            hasil.innerHTML = `Anda Mendapat Nilai B`;
+        }else if(nilai.value <= 80){
+            hasil.innerHTML = `Anda Mendapat Nilai B+`;
+        }else if(nilai.value <= 100){
+            hasil.innerHTML = `Anda Mendapat Nilai A`;
+        }
+    } );
+</script>
+
+</html>
