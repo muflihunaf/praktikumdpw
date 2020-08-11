@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi</title>
+</head>
+<body>
+    <label>Nilai:</label>
+    <input type="number" id="nilai1">
+    <input type="number" id="nilai2">
+    <select name="" id="operator">
+        <option value="tambah">+</option>
+        <option value="kurang">-</option>
+        <option value="bagi">/</option>
+        <option value="kali">X</option>
+    </select>
+    <button id="btn">Konversi</button>
+
+    <h4 id="hasil"></h4>
+</body>
+<script type="text/javascript">
+    let nilai1 = document.getElementById('nilai1');
+    let nilai2 = document.getElementById('nilai2');
+    let hasil = document.getElementById('hasil');
+    let operator = document.getElementById('operator');
+    let btn = document.getElementById('btn');
+    btn.addEventListener("click", function () {
+        let ope = operator.options[operator.selectedIndex].value;
+        let bil1 = parseInt(nilai1.value);
+        let bil2 = parseInt(nilai2.value);
+        if (ope == "tambah") {
+            total = bil1 + bil2;
+            hasil.innerHTML = "Hasil Penjumlahan: " + total;
+        }else if(ope == "kurang"){
+            total = bil1 - bil2;
+            hasil.innerHTML = "Hasil Pengurangan: " + total;
+        }else if(ope == "bagi"){
+            total = bil1 / bil2;
+            hasil.innerHTML = "Hasil Pembagian: " + total;
+        }else if(ope == "kali"){
+            total = bil1 * bil2;
+            hasil.innerHTML = "Hasil Perkalian: " + total;
+        }
+    } );
+</script>
+
+</html>
